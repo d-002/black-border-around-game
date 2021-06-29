@@ -1,15 +1,17 @@
 import pygame
 from pygame.locals import *
 
-BORDER_X = 100
-BORDER_Y = 70
-SCREEN_SIZE = (640, 480)
+SCREEN_SIZE = pygame.display.Info() # the size of your screen
+WINDOW_SIZE = (640, 480) # the window size you want
 # if you change these values, call Display.__init__() again
 
-if BORDER_X * 2 >= SCREEN_SIZE[0]:
+if WINDOW_SIZE[0] > SCREEN_SIZE[0]:
     raise ValueError("The border is wider than the screen")
-if BORDER_Y * 2 >= SCREEN_SIZE[1]:
+if WINDOW_SIZE[1] > SCREEN_SIZE[1]:
     raise ValueError("The border is taller than the screen")
+
+BORDER_X = int((SCREEN_SIZE[0] - WINDOW_SIZE[0]) / 2)
+BORDER_Y = int((SCREEN_SIZE[1] - WINDOW_SIZE[1]) / 2)
 
 class Display:
     def __init__(self, color=(0, 0, 0)):
