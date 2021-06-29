@@ -1,7 +1,8 @@
 import pygame
 from pygame.locals import *
 
-SCREEN_SIZE = pygame.display.Info() # the size of your screen
+info = pygame.display.Info()
+SCREEN_SIZE = (info.current_w, info.current_h) # the size of your screen
 WINDOW_SIZE = (640, 480) # the window size you want
 # if you change these values, call Display.__init__() again
 
