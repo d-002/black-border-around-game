@@ -5,6 +5,10 @@ You can put all of these files in a single pygame_border folder, and use it like
 
 ### Just be careful to use `pygame_border.display.blit()` instead of `screen.blit()` when you blit something on the screen.
 
+At this point, only `pygame.draw`, `pygame.display` are rewritten, and you need to manually import each submodule.
+
+I may have missed a function, and something like `get_at()` might not work as expected. Let me know any issue so that I can fix it.
+
 The mouse will be stuck in the drawable window, and everything will act as if you had a tiny screen.
 The `(0, 0)` point is not on the top left of the total screen, but on the top left of the drawable window.
 
@@ -35,7 +39,3 @@ while True:
             pygame.quit()
             exit()
 ```
-
-At this point, only `pygame.draw`, `pygame.display` are rewritten, and you need to manually import each submodule.
-
-I may have missed a function, and something like `get_at()` might not work as expected. Let me know this issue so that I can fix it.
