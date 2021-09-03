@@ -1,4 +1,7 @@
 # black-borders-around-game
+
+Used here: https://stackoverflow.com/q/68156731#68159521
+
 Adds a black border around the game window, to use it in fullscreen to provide a 1.9.6 pygame-like rendering.
 
 You can put all of these files in a single pygame_border folder, and use it like pygame:
