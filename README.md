@@ -6,7 +6,8 @@ Adds a black border around the game window, to use it in fullscreen to provide a
 
 You can put all of these files in a single pygame_border folder, and use it like pygame:
 
-### Just be careful to use `pygame_border.display.blit()` instead of `screen.blit()` when you blit something on the screen.
+> [!WARNING]\
+> Make sure to use `pygame_border.display.blit()` instead of `screen.blit()` when you blit something on the screen.
 
 At this point, only `pygame.draw`, `pygame.display` are rewritten, and you need to manually import each submodule.
 
